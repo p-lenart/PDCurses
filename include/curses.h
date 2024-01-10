@@ -414,7 +414,7 @@ PDCEX  chtype       acs_map[];    /* alternate character set map */
 PDCEX  char         ttytype[];    /* terminal name/description */
 
 // This is just to silence warning in swift about shared mutable state of stdscr
-WINDOW * get_stdscr() {
+static inline WINDOW * get_stdscr() {
     return stdscr;
 }
 
